@@ -1,7 +1,8 @@
 package ffmpeg
 
 /*
-#cgo LDFLAGS: -lavformat -lavutil -lavcodec -lavresample -lswscale
+#cgo CFLAGS: -I/usr/include/ffmpeg
+#cgo LDFLAGS: -L/usr/lib64 -lavformat -lavutil -lavcodec -lavresample -lswscale
 #include "ffmpeg.h"
 void ffinit() {
 	av_register_all();
